@@ -4,7 +4,7 @@
     "type": "library",
     "require": {
         "ext-json": "*",
-        "zdrojowa/cms-kernel": "^1.3",
+        "zdrojowa/cms-kernel": "^2.0",
         "php": "^7.4",
         "kosinski/amqp": "^0.1",
         "zdrojowa/authenticationlink": "^2.0"
