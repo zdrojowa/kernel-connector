@@ -38,7 +38,7 @@ class KernelSynchronizationController extends Controller
             Amqp::publish(new AclPresenceProducer($presence, $this->authenticationlink, $this->system->id, $parentAnchor));
 
             $children = $presence->getChildren();
-            if($children !== null && $children->count() > 0) $this->producePresence($children->toArray(), $presence->getAnchor());
+            if($children !== null && $children->count() > 0) $this->producePresence($children->toArray(), Core::aclRepository()->getAnchor($presence));
         }
     }
 }
