@@ -4,6 +4,7 @@ namespace Zdrojowa\KernelConnector\Producers;
 
 use Kosinski\Amqp\Contracts\Producer;
 use Selene\Contracts\Acl\Presence\AclPresence;
+use Selene\Support\Facades\Core;
 use Zdrojowa\AuthenticationLink\AuthenticationLink;
 use Zdrojowa\AuthenticationLink\Exceptions\InvalidSystemException;
 
@@ -54,7 +55,7 @@ final class AclPresenceProducer extends Producer
      */
     public function __construct(AclPresence $aclPresence, AuthenticationLink $authenticationLink, int $systemId, string $parentAnchor = null)
     {
-        $this->anchor = $aclPresence->getAnchor();
+        $this->anchor = Core::aclRepository()->getAnchor($aclPresence);
         $this->name = $aclPresence->getName();
         $this->parent = $parentAnchor;
         $this->system = $systemId;
