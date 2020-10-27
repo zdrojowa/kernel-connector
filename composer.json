@@ -6,7 +6,7 @@
         "ext-json": "*",
         "zdrojowa/cms-kernel": "^2.0",
         "php": "^7.4",
-        "kosinski/amqp": "^0.1",
+        "zdrojowa/amqp": "^1.0",
         "zdrojowa/authenticationlink": "~2.1"
     },
     "license": "MIT",

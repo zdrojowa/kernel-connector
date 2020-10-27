@@ -2,7 +2,7 @@
 
 namespace Zdrojowa\KernelConnector\Producers;
 
-use Kosinski\Amqp\Contracts\Producer;
+use Zdrojowa\Amqp\Contracts\Producer;
 use Selene\Contracts\Acl\Presence\AclPresence;
 use Selene\Support\Facades\Core;
 use Zdrojowa\AuthenticationLink\AuthenticationLink;
